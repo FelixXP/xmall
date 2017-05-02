@@ -9,15 +9,19 @@ module.exports = {
     },
     // 入口文件输出配置
     output : {
+        // path: 'public/',
         filename : 'public/js/[name].bundle.js',
-        publicPath: '//localhost:3000/'
+        publicPath: ''
     },
     module: {
         // 加载器配置
         loaders: [
         {
-            test: /\.(js|jsx)$/,
-            loader: 'babel-loader!jsx-loader?harmony',
+            test: /\.js$/,
+            loader: 'babel-loader',
+            query: {
+                presets: ['react','es2015']
+            },
             exclude: /node_modules/
         },
         {
