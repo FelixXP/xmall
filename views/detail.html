@@ -1,97 +1,60 @@
-Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Entry module not found: Error: Cannot resolve 'file' or 'directory' F:\毕业设计\xmall\origin\views\detail.html in F:\毕业设计\  xmall:
-  Error: Cannot resolve 'file' or 'directory' F:\毕业设计\xmall\origin\views\detail.html in F:\毕业设计\xmall
-  
-  - compiler.js:76 
-    [xmall]/[.2.28.0@html-webpack-plugin]/lib/compiler.js:76:16
-  
-  - Compiler.js:214 Compiler.<anonymous>
-    [xmall]/[.1.15.0@webpack]/lib/Compiler.js:214:10
-  
-  - Compiler.js:403 
-    [xmall]/[.1.15.0@webpack]/lib/Compiler.js:403:12
-  
-  - Tapable.js:67 Compiler.next
-    [xmall]/[.0.1.10@tapable]/lib/Tapable.js:67:11
-  
-  - CachePlugin.js:40 Compiler.<anonymous>
-    [xmall]/[.1.15.0@webpack]/lib/CachePlugin.js:40:4
-  
-  - Tapable.js:71 Compiler.applyPluginsAsync
-    [xmall]/[.0.1.10@tapable]/lib/Tapable.js:71:13
-  
-  - Compiler.js:400 Compiler.<anonymous>
-    [xmall]/[.1.15.0@webpack]/lib/Compiler.js:400:9
-  
-  - Compilation.js:577 Compilation.<anonymous>
-    [xmall]/[.1.15.0@webpack]/lib/Compilation.js:577:13
-  
-  - Tapable.js:60 Compilation.applyPluginsAsync
-    [xmall]/[.0.1.10@tapable]/lib/Tapable.js:60:69
-  
-  - Compilation.js:572 Compilation.<anonymous>
-    [xmall]/[.1.15.0@webpack]/lib/Compilation.js:572:10
-  
-  - Tapable.js:60 Compilation.applyPluginsAsync
-    [xmall]/[.0.1.10@tapable]/lib/Tapable.js:60:69
-  
-  - Compilation.js:567 Compilation.<anonymous>
-    [xmall]/[.1.15.0@webpack]/lib/Compilation.js:567:9
-  
-  - Tapable.js:60 Compilation.applyPluginsAsync
-    [xmall]/[.0.1.10@tapable]/lib/Tapable.js:60:69
-  
-  - Compilation.js:563 Compilation.<anonymous>
-    [xmall]/[.1.15.0@webpack]/lib/Compilation.js:563:8
-  
-  - Tapable.js:60 Compilation.applyPluginsAsync
-    [xmall]/[.0.1.10@tapable]/lib/Tapable.js:60:69
-  
-  - Compilation.js:525 Compilation.seal
-    [xmall]/[.1.15.0@webpack]/lib/Compilation.js:525:7
-  
-  - Compiler.js:397 Compiler.<anonymous>
-    [xmall]/[.1.15.0@webpack]/lib/Compiler.js:397:15
-  
-  - Tapable.js:103 
-    [xmall]/[.0.1.10@tapable]/lib/Tapable.js:103:11
-  
-  - Compilation.js:445 Compilation.<anonymous>
-    [xmall]/[.1.15.0@webpack]/lib/Compilation.js:445:10
-  
-  - Compilation.js:344 Compilation.errorAndCallback
-    [xmall]/[.1.15.0@webpack]/lib/Compilation.js:344:3
-  
-  - Compilation.js:358 Compilation.<anonymous>
-    [xmall]/[.1.15.0@webpack]/lib/Compilation.js:358:11
-  
-  - NormalModuleFactory.js:29 onDoneResolving
-    [xmall]/[.1.15.0@webpack]/lib/NormalModuleFactory.js:29:20
-  
-  - NormalModuleFactory.js:85 
-    [xmall]/[.1.15.0@webpack]/lib/NormalModuleFactory.js:85:20
-  
-  - async.js:726 
-    [xmall]/[.1.5.2@async]/lib/async.js:726:13
-  
-  - async.js:52 
-    [xmall]/[.1.5.2@async]/lib/async.js:52:16
-  
-  - async.js:241 done
-    [xmall]/[.1.5.2@async]/lib/async.js:241:17
-  
-  - async.js:44 
-    [xmall]/[.1.5.2@async]/lib/async.js:44:16
-  
-  - async.js:723 
-    [xmall]/[.1.5.2@async]/lib/async.js:723:17
-  
-  - async.js:167 
-    [xmall]/[.1.5.2@async]/lib/async.js:167:37
-  
-  - UnsafeCachePlugin.js:24 
-    [xmall]/[.0.9.1@enhanced-resolve]/lib/UnsafeCachePlugin.js:24:19
-  
-</pre>
+<!DOCTYPE html> <!-- 使用 HTML5 doctype，不区分大小写 -->
+<html lang="zh-cmn-Hans"> <!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa -->
+<head>
+    <!-- 声明文档使用的字符编码 -->
+    <meta charset='utf-8'>
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!-- 页面描述 -->
+    <meta name="description" content="不超过150个字符"/>
+    <!-- 页面关键词 -->
+    <meta name="keywords" content=""/>
+    <!-- 网页作者 -->
+    <meta name="author" content="felix, felixxop@gmail.com"/>
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" content="index,follow"/>
+    <!-- 为移动设备添加 viewport -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边 http://bigc.at/ios-webapp-viewport-meta.orz -->
+ 
+    <!-- iOS 设备 begin -->
+    <meta name="apple-mobile-web-app-title" content="标题">
+    <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+ 
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+    <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 不让百度转码 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>商品详情 </title>
+<body>
+	<div id="container"></div>
+<script type="text/javascript" src="public/js/detail.bundle.js"></script></body>
+</html>

@@ -5,7 +5,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     // 页面入口文件配置
     entry : {
-        'index': './origin/public/js/index.js'
+        'index': './origin/public/js/index.js',
+        'detail': './origin/public/js/detail.js'
     },
     // 入口文件输出配置
     output : {
@@ -34,7 +35,7 @@ module.exports = {
         },
         {
             test: /\.(png|jpg|gif)$/,
-            loader: 'file-loader?name=static/img/[name].[ext]'
+            loader: 'file-loader?name=public/img/[name].[ext]'
         }
         ]        
     },
@@ -47,8 +48,16 @@ module.exports = {
         new htmlWebpackPlugin({
             filename: 'views/index.html',
             template: 'origin/views/index.html',
+            title: '首页',
             inject: 'body',
             chunks: ['index']
+        }),
+        new htmlWebpackPlugin({
+            filename: 'views/detail.html',
+            template: 'origin/views/index.html',
+            title: '商品详情',
+            inject: 'body',
+            chunks: ['detail']
         })
     ]
 }
