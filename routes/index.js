@@ -6,9 +6,15 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
-/* GET detail page. */
-router.get('/detail', function(req, res, next) {
-  res.render('detail');
+
+/* GET upload page. */
+router.get('/upload', function(req, res, next) {
+  res.render('upload');
+});
+
+/* GET my page. */
+router.get('/my', function(req, res, next) {
+  res.render('my');
 });
 
 

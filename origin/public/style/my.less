@@ -1,0 +1,72 @@
+@import url(./global.less);
+
+.profile-wrap{
+	background-color: @body-color;
+	.profile-group{
+		margin-bottom: 0.1rem;
+		padding: 0.1rem;
+	}
+	.profile-head{
+		margin-top: 0.1rem;
+		.img-box{
+			display: inline-block;
+			width: 0.4rem;
+			height: 0.4rem;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+		}
+		.name{
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 0.1rem;
+			margin-bottom: 0.06rem;
+			p{
+				line-height: 0.4rem;
+
+			}
+		}
+
+		.header{
+			border-bottom: 1px solid @border-color;
+		}
+		.footer{
+			margin-top: 0.1rem;
+		}
+		.item{
+			display: inline-block;
+			width: 48%;
+			h3,p{
+				font-size: 0.12rem;
+				text-align: center;
+			}
+			h3{
+				color: #AAA;
+			}
+			p{
+				font-weight: bold;
+				color: #F78E0F;
+			}
+		}
+	}
+
+	.profile-group{
+		p{
+			color: inherit;
+		}
+		.text{
+			color: #AAA;
+		}
+	}
+	.profile-phone{
+		margin-bottom: 0.5px;
+	}
+
+	.profile-exit{
+		color: @price-color;
+		text-align: center;
+	}
+}

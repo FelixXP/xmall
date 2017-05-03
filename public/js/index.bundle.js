@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "//localhost:3000/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -52,11 +52,11 @@
 
 	var _reactDom = __webpack_require__(36);
 
-	var _Main = __webpack_require__(204);
+	var _Main = __webpack_require__(266);
 
 	var _Main2 = _interopRequireDefault(_Main);
 
-	var _index = __webpack_require__(208);
+	var _index = __webpack_require__(270);
 
 	var _index2 = _interopRequireDefault(_index);
 
@@ -21805,7 +21805,69 @@
 /* 189 */,
 /* 190 */,
 /* 191 */,
-/* 192 */
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -21884,10 +21946,10 @@
 	  return '/*# ' + data + ' */';
 	}
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(193).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(255).Buffer))
 
 /***/ }),
-/* 193 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/*!
@@ -21900,9 +21962,9 @@
 
 	'use strict'
 
-	var base64 = __webpack_require__(194)
-	var ieee754 = __webpack_require__(195)
-	var isArray = __webpack_require__(196)
+	var base64 = __webpack_require__(256)
+	var ieee754 = __webpack_require__(257)
+	var isArray = __webpack_require__(258)
 
 	exports.Buffer = Buffer
 	exports.SlowBuffer = SlowBuffer
@@ -23683,7 +23745,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }),
-/* 194 */
+/* 256 */
 /***/ (function(module, exports) {
 
 	'use strict'
@@ -23803,7 +23865,7 @@
 
 
 /***/ }),
-/* 195 */
+/* 257 */
 /***/ (function(module, exports) {
 
 	exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -23893,7 +23955,7 @@
 
 
 /***/ }),
-/* 196 */
+/* 258 */
 /***/ (function(module, exports) {
 
 	var toString = {}.toString;
@@ -23904,22 +23966,22 @@
 
 
 /***/ }),
-/* 197 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "public/img/icon_return.png";
 
 /***/ }),
-/* 198 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "public/img/icon_share1.png";
 
 /***/ }),
-/* 199 */,
-/* 200 */,
-/* 201 */,
-/* 202 */
+/* 261 */,
+/* 262 */,
+/* 263 */,
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*
@@ -23956,7 +24018,7 @@
 		singletonElement = null,
 		singletonCounter = 0,
 		styleElementsInsertedAtTop = [],
-		fixUrls = __webpack_require__(203);
+		fixUrls = __webpack_require__(265);
 
 	module.exports = function(list, options) {
 		if(false) {
@@ -24215,7 +24277,7 @@
 
 
 /***/ }),
-/* 203 */
+/* 265 */
 /***/ (function(module, exports) {
 
 	
@@ -24310,7 +24372,7 @@
 
 
 /***/ }),
-/* 204 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24325,15 +24387,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Banner = __webpack_require__(205);
+	var _Banner = __webpack_require__(267);
 
 	var _Banner2 = _interopRequireDefault(_Banner);
 
-	var _GoodsItem = __webpack_require__(206);
+	var _GoodsItem = __webpack_require__(268);
 
 	var _GoodsItem2 = _interopRequireDefault(_GoodsItem);
 
-	var _GoodsHeader = __webpack_require__(207);
+	var _GoodsHeader = __webpack_require__(269);
 
 	var _GoodsHeader2 = _interopRequireDefault(_GoodsHeader);
 
@@ -24449,7 +24511,7 @@
 	exports.default = Main;
 
 /***/ }),
-/* 205 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24498,7 +24560,7 @@
 	exports.default = Banner;
 
 /***/ }),
-/* 206 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -24578,7 +24640,7 @@
 	exports.default = GoodsItem;
 
 /***/ }),
-/* 207 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -24642,16 +24704,16 @@
 	exports.default = GoodsHeader;
 
 /***/ }),
-/* 208 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(209);
+	var content = __webpack_require__(271);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(202)(content, {});
+	var update = __webpack_require__(264)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -24668,15 +24730,15 @@
 	}
 
 /***/ }),
-/* 209 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(192)(undefined);
+	exports = module.exports = __webpack_require__(254)(undefined);
 	// imports
 
 
 	// module
-	exports.push([module.id, ".hide {\n  display: none !important;\n}\n.tab {\n  border-radius: 5px;\n  background-color: #F11F1E;\n  color: #F5F5F5;\n  padding: 5px 6px;\n  margin-right: 0.1rem;\n}\n.tab.tab-orange {\n  background-color: #F78E0F;\n}\n.tab.tab-blue {\n  background-color: #4A8BF6;\n}\n.fl-right {\n  float: right;\n}\n.fl-right:after {\n  content: \" \";\n  display: block;\n  clear: both;\n  height: 0;\n  font-size: 0;\n  visibility: hidden;\n}\n.page-head {\n  height: 0.4rem;\n  position: relative;\n}\n.page-head h1 {\n  text-align: center;\n  font-size: 0.18rem;\n  font-weight: normal;\n  line-height: 0.4rem;\n}\n.page-head .icon-return {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(197) + ");\n  position: absolute;\n  left: 0.1rem;\n  top: 0.125rem;\n}\n.page-head .icon-share {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(198) + ");\n  position: absolute;\n  right: 0.1rem;\n  top: 0.125rem;\n}\n* {\n  padding: 0;\n  margin: 0;\n  color: #333;\n}\nhtml {\n  font-size: 100px;\n}\nbody {\n  font-size: 14px;\n  background-color: #F3F6F8;\n}\nli {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\ninput,\ntextarea {\n  border: none;\n}\nheader,\ndiv {\n  background-color: #fff;\n}\n.index-banner {\n  width: 100%;\n  height: 1rem;\n  overflow: hidden;\n}\n.index-banner img {\n  width: 100%;\n  height: auto;\n}\n.headlines {\n  height: 0.4rem;\n  background-color: #ED4D44;\n  margin: 0.2rem 0;\n}\n.hot-sale .title {\n  margin-bottom: 0.25rem;\n}\n.hot-sale .title .line {\n  position: relative;\n  height: 4px;\n  background-color: #cfcfcf;\n}\n.hot-sale .title .line span {\n  display: inline-block;\n  padding: 10px 20px;\n  background: #fff;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.hot-sale .hot-list-wrap {\n  position: relative;\n  height: 2.1rem;\n}\n.hot-sale .hot-list-wrap .list-item {\n  position: absolute;\n  margin: 20px;\n  border-radius: 10px 10px 0 0;\n  border: 1px solid #e5e5e5;\n}\n.hot-sale .hot-list-wrap .list-item a {\n  display: block;\n}\n.hot-sale .hot-list-wrap .list-item .img-box {\n  width: 100%;\n  height: 1rem;\n  overflow: hidden;\n  border-radius: 10px 10px 0 0;\n}\n.hot-sale .hot-list-wrap .list-item .img-box img {\n  width: 100%;\n  height: auto;\n}\n.hot-sale .hot-list-wrap .list-item .info {\n  margin: 8px;\n}\n.hot-sale .hot-list-wrap .list-item .info .introduction-wrap {\n  position: relative;\n  overflow: hidden;\n  padding: 4px 0;\n}\n.hot-sale .hot-list-wrap .list-item .info .introduction {\n  width: 80%;\n  float: left;\n  overflow: hidden;\n  font-size: 12px;\n  font-family: 'STFangsong';\n  color: #999;\n}\n.hot-sale .hot-list-wrap .list-item .info .price {\n  width: 20;\n  float: right;\n  font-size: 12px;\n  font-family: 'STFangsong';\n  color: #ED4D44;\n}\n.goods-list-wrap .banner {\n  position: relative;\n  z-index: 0;\n  background-color: #08C4A2;\n  padding: 10px 10px 0.5rem 10px;\n}\n.goods-list-wrap .banner h1,\n.goods-list-wrap .banner p {\n  color: #F5F5F5;\n}\n.goods-list-wrap .banner p {\n  line-height: 0.2rem;\n}\n.goods-list-wrap .banner hr {\n  display: block;\n  width: 5.4em;\n  height: 0.04rem;\n  background-color: #F5F5F5;\n  border: none;\n  margin-top: 0.1rem;\n}\n.goods-list-wrap .goods-list {\n  overflow: hidden;\n  height: auto;\n  position: relative;\n  top: -0.5rem;\n}\n.goods-list-wrap .goods-list .list-item:nth-child(2n+1) {\n  margin-left: 4%;\n  top: 0.2rem;\n}\n.goods-list-wrap .goods-list .list-item {\n  position: relative;\n  z-index: 999;\n  width: 44%;\n  float: left;\n  margin: 0 2% 2% 2%;\n  border-radius: 10px 10px 0 0;\n  border: 1px solid #e5e5e5;\n}\n.goods-list-wrap .goods-list .list-item a {\n  display: block;\n}\n.goods-list-wrap .goods-list .list-item .img-box {\n  width: 100%;\n  overflow: hidden;\n  border-radius: 10px 10px 0 0;\n}\n.goods-list-wrap .goods-list .list-item .img-box img {\n  width: 100%;\n  height: auto;\n}\n.goods-list-wrap .goods-list .list-item .info {\n  margin: 8px;\n}\n.goods-list-wrap .goods-list .list-item .info .introduction-wrap {\n  position: relative;\n  overflow: hidden;\n  padding: 4px 0;\n}\n.goods-list-wrap .goods-list .list-item .info .introduction {\n  width: 80%;\n  float: left;\n  overflow: hidden;\n  font-size: 12px;\n  font-family: 'STFangsong';\n  color: #999;\n}\n.goods-list-wrap .goods-list .list-item .info .price {\n  width: 20;\n  float: right;\n  font-size: 12px;\n  font-family: 'STFangsong';\n  color: #ED4D44;\n}\n", ""]);
+	exports.push([module.id, ".hide {\n  display: none !important;\n}\n.tab {\n  border-radius: 5px;\n  background-color: #F11F1E;\n  color: #F5F5F5;\n  padding: 5px 6px;\n  margin-right: 0.1rem;\n}\n.tab.tab-orange {\n  background-color: #F78E0F;\n}\n.tab.tab-blue {\n  background-color: #4A8BF6;\n}\n.fl-right {\n  float: right;\n}\n.fl-right:after {\n  content: \" \";\n  display: block;\n  clear: both;\n  height: 0;\n  font-size: 0;\n  visibility: hidden;\n}\n.page-head {\n  height: 0.4rem;\n  position: relative;\n}\n.page-head h1 {\n  text-align: center;\n  font-size: 0.18rem;\n  font-weight: normal;\n  line-height: 0.4rem;\n}\n.page-head .icon-return {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(259) + ");\n  position: absolute;\n  left: 0.1rem;\n  top: 0.125rem;\n}\n.page-head .icon-share {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(260) + ");\n  position: absolute;\n  right: 0.1rem;\n  top: 0.125rem;\n}\n* {\n  padding: 0;\n  margin: 0;\n  color: #333;\n}\nhtml {\n  font-size: 100px;\n}\nbody {\n  font-size: 14px;\n  background-color: #F3F6F8;\n}\nli {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\ninput,\ntextarea {\n  border: none;\n}\nheader,\ndiv {\n  background-color: #fff;\n}\n.index-banner {\n  width: 100%;\n  height: 1rem;\n  overflow: hidden;\n}\n.index-banner img {\n  width: 100%;\n  height: auto;\n}\n.headlines {\n  height: 0.4rem;\n  background-color: #ED4D44;\n  margin: 0.2rem 0;\n}\n.hot-sale .title {\n  margin-bottom: 0.25rem;\n}\n.hot-sale .title .line {\n  position: relative;\n  height: 4px;\n  background-color: #cfcfcf;\n}\n.hot-sale .title .line span {\n  display: inline-block;\n  padding: 10px 20px;\n  background: #fff;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.hot-sale .hot-list-wrap {\n  position: relative;\n  height: 2.1rem;\n}\n.hot-sale .hot-list-wrap .list-item {\n  position: absolute;\n  margin: 20px;\n  border-radius: 10px 10px 0 0;\n  border: 1px solid #e5e5e5;\n}\n.hot-sale .hot-list-wrap .list-item a {\n  display: block;\n}\n.hot-sale .hot-list-wrap .list-item .img-box {\n  width: 100%;\n  height: 1rem;\n  overflow: hidden;\n  border-radius: 10px 10px 0 0;\n}\n.hot-sale .hot-list-wrap .list-item .img-box img {\n  width: 100%;\n  height: auto;\n}\n.hot-sale .hot-list-wrap .list-item .info {\n  margin: 8px;\n}\n.hot-sale .hot-list-wrap .list-item .info .introduction-wrap {\n  position: relative;\n  overflow: hidden;\n  padding: 4px 0;\n}\n.hot-sale .hot-list-wrap .list-item .info .introduction {\n  width: 80%;\n  float: left;\n  overflow: hidden;\n  font-size: 12px;\n  font-family: 'STFangsong';\n  color: #999;\n}\n.hot-sale .hot-list-wrap .list-item .info .price {\n  width: 20;\n  float: right;\n  font-size: 12px;\n  font-family: 'STFangsong';\n  color: #ED4D44;\n}\n.goods-list-wrap .banner {\n  position: relative;\n  z-index: 0;\n  background-color: #08C4A2;\n  padding: 10px 10px 0.5rem 10px;\n}\n.goods-list-wrap .banner h1,\n.goods-list-wrap .banner p {\n  color: #F5F5F5;\n}\n.goods-list-wrap .banner p {\n  line-height: 0.2rem;\n}\n.goods-list-wrap .banner hr {\n  display: block;\n  width: 5.4em;\n  height: 0.04rem;\n  background-color: #F5F5F5;\n  border: none;\n  margin-top: 0.1rem;\n}\n.goods-list-wrap .goods-list {\n  overflow: hidden;\n  height: auto;\n  position: relative;\n  top: -0.5rem;\n}\n.goods-list-wrap .goods-list .list-item:nth-child(2n+1) {\n  margin-left: 4%;\n  top: 0.2rem;\n}\n.goods-list-wrap .goods-list .list-item {\n  position: relative;\n  z-index: 999;\n  width: 44%;\n  float: left;\n  margin: 0 2% 2% 2%;\n  border-radius: 10px 10px 0 0;\n  border: 1px solid #e5e5e5;\n}\n.goods-list-wrap .goods-list .list-item a {\n  display: block;\n}\n.goods-list-wrap .goods-list .list-item .img-box {\n  width: 100%;\n  overflow: hidden;\n  border-radius: 10px 10px 0 0;\n}\n.goods-list-wrap .goods-list .list-item .img-box img {\n  width: 100%;\n  height: auto;\n}\n.goods-list-wrap .goods-list .list-item .info {\n  margin: 8px;\n}\n.goods-list-wrap .goods-list .list-item .info .introduction-wrap {\n  position: relative;\n  overflow: hidden;\n  padding: 4px 0;\n}\n.goods-list-wrap .goods-list .list-item .info .introduction {\n  width: 80%;\n  float: left;\n  overflow: hidden;\n  font-size: 12px;\n  font-family: 'STFangsong';\n  color: #999;\n}\n.goods-list-wrap .goods-list .list-item .info .price {\n  width: 20;\n  float: right;\n  font-size: 12px;\n  font-family: 'STFangsong';\n  color: #ED4D44;\n}\n", ""]);
 
 	// exports
 

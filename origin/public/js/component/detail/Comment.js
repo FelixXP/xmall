@@ -28,25 +28,27 @@ class Comment extends React.Component{
 	}
 	render(){
 		return(
-        <div className="comment-wrap">
-            <div className="comment-head">
-                <p>
-                    <span className="icon icon-comment"></span>
-                    评论
-                    <span className="comment-count">{this.comment_count}</span>
-                    条
-                </p>
-            </div>
+            <div>
+                <div className="comment-wrap">
+                    <div className="comment-head">
+                        <p>
+                            <span className="icon icon-comment"></span>
+                            评论
+                            <span className="comment-count">{this.comment_count}</span>
+                            条
+                        </p>
+                    </div>
 
-            <div className="comment-list-wrap">
-                <ul className="comment-list">
-                	{
-                		this.comment_list.map((item, i) => <CommentList key={i} item={item} />)
-                	}
-                </ul>
+                    <div className="comment-list-wrap">
+                        <ul className="comment-list">
+                        	{
+                        		this.comment_list.map((item, i) => <CommentList key={i} item={item} />)
+                        	}
+                        </ul>
+                    </div>
+                </div>
+                <CommentSubmit />
             </div>
-            <CommentSubmit />
-        </div>
 		);
 	}
 }

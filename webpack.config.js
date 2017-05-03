@@ -6,13 +6,15 @@ module.exports = {
     // 页面入口文件配置
     entry : {
         'index': './origin/public/js/index.js',
-        'detail': './origin/public/js/detail.js'
+        'detail': './origin/public/js/detail.js',
+        'upload': './origin/public/js/upload.js',
+        'my': './origin/public/js/my.js',
     },
     // 入口文件输出配置
     output : {
         // path: 'public/',
         filename : 'public/js/[name].bundle.js',
-        publicPath: ''
+        publicPath: '//localhost:3000/'
     },
     module: {
         // 加载器配置
@@ -58,6 +60,20 @@ module.exports = {
             title: '商品详情',
             inject: 'body',
             chunks: ['detail']
+        }),
+        new htmlWebpackPlugin({
+            filename: 'views/upload.html',
+            template: 'origin/views/index.html',
+            title: '发布',
+            inject: 'body',
+            chunks: ['upload']
+        }),
+        new htmlWebpackPlugin({
+            filename: 'views/my.html',
+            template: 'origin/views/my.html',
+            title: '发布',
+            inject: 'body',
+            chunks: ['my']
         })
     ]
 }
