@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 class GoodsItem extends React.Component{
 	render(){
 		return(
 			<li className="list-item">
-				<a href="javascript:;">
+				<Link to="/detail?id=1001">
 					<div className="img-box">
 						<img src={this.props.item.img} />
 					</div>
@@ -15,7 +16,7 @@ class GoodsItem extends React.Component{
 							<span className="price">{this.props.item.price}</span>
 						</div>
 					</div>
-				</a>
+				</Link>
 			</li>
 		);
 	}

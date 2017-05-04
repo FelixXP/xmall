@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {render} from 'react-dom';
-import Main from './component/index/Main';
-import Style from '../style/index.less';
+import IndexRouter from './component/index/IndexRouter';
 
 
-render(<Main/>, document.getElementById('container'));
+render(<IndexRouter/>, document.getElementById('container'));

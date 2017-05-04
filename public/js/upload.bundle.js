@@ -52,11 +52,11 @@
 
 	var _reactDom = __webpack_require__(36);
 
-	var _Main = __webpack_require__(272);
+	var _Main = __webpack_require__(274);
 
 	var _Main2 = _interopRequireDefault(_Main);
 
-	var _upload = __webpack_require__(275);
+	var _upload = __webpack_require__(277);
 
 	var _upload2 = _interopRequireDefault(_upload);
 
@@ -21822,19 +21822,27 @@
 	var Header = function (_React$Component) {
 		_inherits(Header, _React$Component);
 
-		function Header() {
+		function Header(props) {
 			_classCallCheck(this, Header);
 
-			return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+			var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
+
+			_this.onReturn = _this.onReturn.bind(_this);
+			return _this;
 		}
 
 		_createClass(Header, [{
+			key: "onReturn",
+			value: function onReturn() {
+				history.back();
+			}
+		}, {
 			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
 					"header",
 					{ className: "page-head " + this.props.clsName },
-					_react2.default.createElement("a", { href: "javascript:;", className: "icon icon-return" }),
+					_react2.default.createElement("a", { onClick: this.onReturn, href: "javascript:;", className: "icon icon-return" }),
 					_react2.default.createElement("a", { href: "javascript:;", className: "icon icon-share " + (this.props.share ? this.props.share : '') }),
 					_react2.default.createElement(
 						"h1",
@@ -21860,68 +21868,7 @@
 /* 190 */,
 /* 191 */,
 /* 192 */,
-/* 193 */,
-/* 194 */,
-/* 195 */,
-/* 196 */,
-/* 197 */,
-/* 198 */,
-/* 199 */,
-/* 200 */,
-/* 201 */,
-/* 202 */,
-/* 203 */,
-/* 204 */,
-/* 205 */,
-/* 206 */,
-/* 207 */,
-/* 208 */,
-/* 209 */,
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */,
-/* 217 */,
-/* 218 */,
-/* 219 */,
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */,
-/* 230 */,
-/* 231 */,
-/* 232 */,
-/* 233 */,
-/* 234 */,
-/* 235 */,
-/* 236 */,
-/* 237 */,
-/* 238 */,
-/* 239 */,
-/* 240 */,
-/* 241 */,
-/* 242 */,
-/* 243 */,
-/* 244 */,
-/* 245 */,
-/* 246 */,
-/* 247 */,
-/* 248 */,
-/* 249 */,
-/* 250 */,
-/* 251 */,
-/* 252 */,
-/* 253 */,
-/* 254 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -22000,10 +21947,10 @@
 	  return '/*# ' + data + ' */';
 	}
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(255).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(194).Buffer))
 
 /***/ }),
-/* 255 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/*!
@@ -22016,9 +21963,9 @@
 
 	'use strict'
 
-	var base64 = __webpack_require__(256)
-	var ieee754 = __webpack_require__(257)
-	var isArray = __webpack_require__(258)
+	var base64 = __webpack_require__(195)
+	var ieee754 = __webpack_require__(196)
+	var isArray = __webpack_require__(197)
 
 	exports.Buffer = Buffer
 	exports.SlowBuffer = SlowBuffer
@@ -23799,7 +23746,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }),
-/* 256 */
+/* 195 */
 /***/ (function(module, exports) {
 
 	'use strict'
@@ -23919,7 +23866,7 @@
 
 
 /***/ }),
-/* 257 */
+/* 196 */
 /***/ (function(module, exports) {
 
 	exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -24009,7 +23956,7 @@
 
 
 /***/ }),
-/* 258 */
+/* 197 */
 /***/ (function(module, exports) {
 
 	var toString = {}.toString;
@@ -24020,22 +23967,22 @@
 
 
 /***/ }),
-/* 259 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "public/img/icon_return.png";
 
 /***/ }),
-/* 260 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "public/img/icon_share1.png";
 
 /***/ }),
-/* 261 */,
-/* 262 */,
-/* 263 */,
-/* 264 */
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*
@@ -24072,7 +24019,7 @@
 		singletonElement = null,
 		singletonCounter = 0,
 		styleElementsInsertedAtTop = [],
-		fixUrls = __webpack_require__(265);
+		fixUrls = __webpack_require__(204);
 
 	module.exports = function(list, options) {
 		if(false) {
@@ -24331,7 +24278,7 @@
 
 
 /***/ }),
-/* 265 */
+/* 204 */
 /***/ (function(module, exports) {
 
 	
@@ -24426,13 +24373,76 @@
 
 
 /***/ }),
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */,
+/* 256 */,
+/* 257 */,
+/* 258 */,
+/* 259 */,
+/* 260 */,
+/* 261 */,
+/* 262 */,
+/* 263 */,
+/* 264 */,
+/* 265 */,
 /* 266 */,
 /* 267 */,
 /* 268 */,
 /* 269 */,
 /* 270 */,
 /* 271 */,
-/* 272 */
+/* 272 */,
+/* 273 */,
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24451,9 +24461,13 @@
 
 	var _Header2 = _interopRequireDefault(_Header);
 
-	var _UploadForm = __webpack_require__(273);
+	var _UploadForm = __webpack_require__(275);
 
 	var _UploadForm2 = _interopRequireDefault(_UploadForm);
+
+	var _upload = __webpack_require__(277);
+
+	var _upload2 = _interopRequireDefault(_upload);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24490,7 +24504,7 @@
 	exports.default = Main;
 
 /***/ }),
-/* 273 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24505,7 +24519,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _AddPicture = __webpack_require__(274);
+	var _AddPicture = __webpack_require__(276);
 
 	var _AddPicture2 = _interopRequireDefault(_AddPicture);
 
@@ -24598,7 +24612,7 @@
 	exports.default = UploadForm;
 
 /***/ }),
-/* 274 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -24668,16 +24682,16 @@
 	exports.default = AddPicture;
 
 /***/ }),
-/* 275 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(276);
+	var content = __webpack_require__(278);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(264)(content, {});
+	var update = __webpack_require__(203)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -24694,15 +24708,15 @@
 	}
 
 /***/ }),
-/* 276 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(254)(undefined);
+	exports = module.exports = __webpack_require__(193)(undefined);
 	// imports
 
 
 	// module
-	exports.push([module.id, ".hide {\n  display: none !important;\n}\n.tab {\n  border-radius: 5px;\n  background-color: #F11F1E;\n  color: #F5F5F5;\n  padding: 5px 6px;\n  margin-right: 0.1rem;\n}\n.tab.tab-orange {\n  background-color: #F78E0F;\n}\n.tab.tab-blue {\n  background-color: #4A8BF6;\n}\n.fl-right {\n  float: right;\n}\n.fl-right:after {\n  content: \" \";\n  display: block;\n  clear: both;\n  height: 0;\n  font-size: 0;\n  visibility: hidden;\n}\n.page-head {\n  height: 0.4rem;\n  position: relative;\n}\n.page-head h1 {\n  text-align: center;\n  font-size: 0.18rem;\n  font-weight: normal;\n  line-height: 0.4rem;\n}\n.page-head .icon-return {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(259) + ");\n  position: absolute;\n  left: 0.1rem;\n  top: 0.125rem;\n}\n.page-head .icon-share {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(260) + ");\n  position: absolute;\n  right: 0.1rem;\n  top: 0.125rem;\n}\n* {\n  padding: 0;\n  margin: 0;\n  color: #333;\n}\nhtml {\n  font-size: 100px;\n}\nbody {\n  font-size: 14px;\n  background-color: #F3F6F8;\n}\nli {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\ninput,\ntextarea {\n  border: none;\n}\nheader,\ndiv {\n  background-color: #fff;\n}\n.check-box {\n  display: inline-block;\n  width: 2.5em;\n  height: 1em;\n  box-sizing: border-box;\n  border: 1px solid #e5e5e5;\n  background-color: #CBCBCB;\n  position: relative;\n}\n.check-box:before {\n  content: \" \";\n  display: block;\n  position: absolute;\n  width: 1.1em;\n  height: 1.1em;\n  background-color: #F5F5F5;\n  left: 0;\n}\n.check-box:after {\n  content: \"\\D7\";\n  position: absolute;\n  font-weight: bold;\n  line-height: 1em;\n  right: 1px;\n  color: #F5F5F5;\n  font-size: 0.12rem;\n}\n.check-box.checked {\n  display: inline-block;\n  width: 2.5em;\n  height: 1em;\n  box-sizing: border-box;\n  border: 1px solid #e5e5e5;\n  background-color: #01A1EA;\n  position: relative;\n}\n.check-box.checked:before {\n  left: auto;\n  right: 0;\n}\n.check-box.checked:after {\n  display: none;\n}\n.page-head {\n  margin-bottom: 1px;\n}\n.add-pag-box {\n  text-align: center;\n  margin-bottom: 0.15rem;\n}\n.add-pag-box .add-page {\n  display: inline-block;\n  width: 5em;\n  padding: 0.1rem 0;\n}\n.add-pag-box img {\n  width: 100%;\n  height: auto;\n}\n.add-pag-box span {\n  color: #F3F6F8;\n  text-align: left;\n  font-weight: bold;\n}\n.upload-form {\n  background-color: #F3F6F8;\n}\n.upload-form #introduction {\n  width: 100%;\n  padding: 0.05rem;\n  line-height: 2em;\n  box-sizing: border-box;\n}\n.upload-form .form-group {\n  margin-bottom: 0.1rem;\n  padding: 0 0.2rem;\n}\n.upload-form .form-group input,\n.upload-form .form-group label,\n.upload-form .form-group p {\n  line-height: 2em;\n  vertical-align: middle;\n}\n.upload-form .form-group label {\n  margin-right: 0.2rem;\n}\n.upload-form .form-group .submit-btn {\n  margin: 0.1rem;\n  padding: 2px 10px;\n  letter-spacing: 5px;\n  border-radius: 5px;\n  background-color: #01A1EA;\n  color: #F5F5F5;\n  text-align: center;\n}\n.upload-form .submit-group {\n  text-align: center;\n}\n.upload-form .contact {\n  font-size: 0.12rem;\n  color: #333;\n  background-color: #F3F6F8;\n  width: 100%;\n  margin-left: 0.2rem;\n  margin-bottom: 0.04rem;\n}\n", ""]);
+	exports.push([module.id, ".hide {\n  display: none !important;\n}\n.tab {\n  border-radius: 5px;\n  background-color: #F11F1E;\n  color: #F5F5F5;\n  padding: 5px 6px;\n  margin-right: 0.1rem;\n}\n.tab.tab-orange {\n  background-color: #F78E0F;\n}\n.tab.tab-blue {\n  background-color: #4A8BF6;\n}\n.fl-right {\n  float: right;\n}\n.fl-right:after {\n  content: \" \";\n  display: block;\n  clear: both;\n  height: 0;\n  font-size: 0;\n  visibility: hidden;\n}\n.page-head {\n  height: 0.4rem;\n  position: relative;\n}\n.page-head h1 {\n  text-align: center;\n  font-size: 0.18rem;\n  font-weight: normal;\n  line-height: 0.4rem;\n}\n.page-head .icon-return {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(198) + ");\n  position: absolute;\n  left: 0.1rem;\n  top: 0.125rem;\n}\n.page-head .icon-share {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(199) + ");\n  position: absolute;\n  right: 0.1rem;\n  top: 0.125rem;\n}\n* {\n  padding: 0;\n  margin: 0;\n  color: #333;\n}\nhtml {\n  font-size: 100px;\n}\nbody {\n  font-size: 14px;\n  background-color: #F3F6F8;\n}\nli {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\ninput,\ntextarea {\n  border: none;\n  outline: none;\n}\nheader,\ndiv {\n  background-color: #fff;\n}\n.check-box {\n  display: inline-block;\n  width: 2.5em;\n  height: 1em;\n  box-sizing: border-box;\n  border: 1px solid #e5e5e5;\n  background-color: #CBCBCB;\n  position: relative;\n}\n.check-box:before {\n  content: \" \";\n  display: block;\n  position: absolute;\n  width: 1.1em;\n  height: 1.1em;\n  background-color: #F5F5F5;\n  left: 0;\n}\n.check-box:after {\n  content: \"\\D7\";\n  position: absolute;\n  font-weight: bold;\n  line-height: 1em;\n  right: 1px;\n  color: #F5F5F5;\n  font-size: 0.12rem;\n}\n.check-box.checked {\n  display: inline-block;\n  width: 2.5em;\n  height: 1em;\n  box-sizing: border-box;\n  border: 1px solid #e5e5e5;\n  background-color: #01A1EA;\n  position: relative;\n}\n.check-box.checked:before {\n  left: auto;\n  right: 0;\n}\n.check-box.checked:after {\n  display: none;\n}\n.page-head {\n  margin-bottom: 1px;\n}\n.add-pag-box {\n  text-align: center;\n  margin-bottom: 0.15rem;\n}\n.add-pag-box .add-page {\n  display: inline-block;\n  width: 5em;\n  padding: 0.1rem 0;\n}\n.add-pag-box img {\n  width: 100%;\n  height: auto;\n}\n.add-pag-box span {\n  color: #F3F6F8;\n  text-align: left;\n  font-weight: bold;\n}\n.upload-form {\n  background-color: #F3F6F8;\n}\n.upload-form #introduction {\n  width: 100%;\n  padding: 0.05rem;\n  line-height: 2em;\n  box-sizing: border-box;\n}\n.upload-form .form-group {\n  margin-bottom: 0.1rem;\n  padding: 0 0.2rem;\n}\n.upload-form .form-group input,\n.upload-form .form-group label,\n.upload-form .form-group p {\n  line-height: 2em;\n  vertical-align: middle;\n}\n.upload-form .form-group label {\n  margin-right: 0.2rem;\n}\n.upload-form .form-group .submit-btn {\n  margin: 0.1rem;\n  padding: 2px 10px;\n  letter-spacing: 5px;\n  border-radius: 5px;\n  background-color: #01A1EA;\n  color: #F5F5F5;\n  text-align: center;\n}\n.upload-form .submit-group {\n  text-align: center;\n}\n.upload-form .contact {\n  font-size: 0.12rem;\n  color: #333;\n  background-color: #F3F6F8;\n  width: 100%;\n  margin-left: 0.2rem;\n  margin-bottom: 0.04rem;\n}\n", ""]);
 
 	// exports
 

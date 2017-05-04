@@ -52,17 +52,17 @@
 
 	var _reactDom = __webpack_require__(36);
 
-	var _Main = __webpack_require__(282);
+	var _LoginRouter = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./component/login/LoginRouter\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
-	var _Main2 = _interopRequireDefault(_Main);
+	var _LoginRouter2 = _interopRequireDefault(_LoginRouter);
 
-	var _my = __webpack_require__(283);
+	var _login = __webpack_require__(285);
 
-	var _my2 = _interopRequireDefault(_my);
+	var _login2 = _interopRequireDefault(_login);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	(0, _reactDom.render)(_react2.default.createElement(_Main2.default, null), document.getElementById('container'));
+	(0, _reactDom.render)(_react2.default.createElement(_LoginRouter2.default, null), document.getElementById('container'));
 
 /***/ }),
 /* 1 */
@@ -21796,69 +21796,7 @@
 
 /***/ }),
 /* 182 */,
-/* 183 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Header = function (_React$Component) {
-		_inherits(Header, _React$Component);
-
-		function Header(props) {
-			_classCallCheck(this, Header);
-
-			var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
-
-			_this.onReturn = _this.onReturn.bind(_this);
-			return _this;
-		}
-
-		_createClass(Header, [{
-			key: "onReturn",
-			value: function onReturn() {
-				history.back();
-			}
-		}, {
-			key: "render",
-			value: function render() {
-				return _react2.default.createElement(
-					"header",
-					{ className: "page-head " + this.props.clsName },
-					_react2.default.createElement("a", { onClick: this.onReturn, href: "javascript:;", className: "icon icon-return" }),
-					_react2.default.createElement("a", { href: "javascript:;", className: "icon icon-share " + (this.props.share ? this.props.share : '') }),
-					_react2.default.createElement(
-						"h1",
-						null,
-						this.props.title
-					)
-				);
-			}
-		}]);
-
-		return Header;
-	}(_react2.default.Component);
-
-	exports.default = Header;
-
-/***/ }),
+/* 183 */,
 /* 184 */,
 /* 185 */,
 /* 186 */,
@@ -24450,171 +24388,16 @@
 /* 279 */,
 /* 280 */,
 /* 281 */,
-/* 282 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Header = __webpack_require__(183);
-
-	var _Header2 = _interopRequireDefault(_Header);
-
-	var _my = __webpack_require__(283);
-
-	var _my2 = _interopRequireDefault(_my);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Main = function (_React$Component) {
-		_inherits(Main, _React$Component);
-
-		function Main(props) {
-			_classCallCheck(this, Main);
-
-			var _this = _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this, props));
-
-			_this.data = {
-				img: '/public/img/02.jpg',
-				name: 'Alex',
-				publish: 12,
-				liked: 1,
-				phone: 18814128046,
-				time: '2017-05-01'
-			};
-			return _this;
-		}
-
-		_createClass(Main, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					{ className: 'profile-wrap' },
-					_react2.default.createElement(_Header2.default, { title: '\u6211', clsName: 'head', share: 'hide' }),
-					_react2.default.createElement(
-						'div',
-						{ className: 'profile-head profile-group' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'header' },
-							_react2.default.createElement(
-								'div',
-								{ className: 'img-box' },
-								_react2.default.createElement('img', { src: this.data.img })
-							),
-							_react2.default.createElement(
-								'div',
-								{ className: 'name' },
-								_react2.default.createElement(
-									'p',
-									null,
-									this.data.name
-								)
-							)
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'footer' },
-							_react2.default.createElement(
-								'div',
-								{ className: 'item' },
-								_react2.default.createElement(
-									'h3',
-									null,
-									'\u6211\u7684\u53D1\u5E03'
-								),
-								_react2.default.createElement(
-									'p',
-									null,
-									this.data.publish
-								)
-							),
-							_react2.default.createElement(
-								'div',
-								{ className: 'item' },
-								_react2.default.createElement(
-									'h3',
-									null,
-									'\u6211\u7684\u70B9\u8D5E'
-								),
-								_react2.default.createElement(
-									'p',
-									null,
-									this.data.liked
-								)
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'profile-phone profile-group' },
-						_react2.default.createElement(
-							'p',
-							null,
-							'\u6211\u7684\u624B\u673A',
-							_react2.default.createElement(
-								'span',
-								{ className: 'text fl-right' },
-								this.data.phone
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'profile-time profile-group' },
-						_react2.default.createElement(
-							'p',
-							null,
-							'\u6CE8\u518C\u65F6\u95F4',
-							_react2.default.createElement(
-								'span',
-								{ className: 'text fl-right' },
-								this.data.time
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'profile-exit profile-group' },
-						_react2.default.createElement(
-							'p',
-							null,
-							'\u9000\u51FA\u767B\u5F55'
-						)
-					)
-				);
-			}
-		}]);
-
-		return Main;
-	}(_react2.default.Component);
-
-	exports.default = Main;
-
-/***/ }),
-/* 283 */
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(284);
+	var content = __webpack_require__(286);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(203)(content, {});
@@ -24623,8 +24406,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/.0.28.0@css-loader/index.js!../../../node_modules/.4.0.3@less-loader/dist/index.js!./my.less", function() {
-				var newContent = require("!!../../../node_modules/.0.28.0@css-loader/index.js!../../../node_modules/.4.0.3@less-loader/dist/index.js!./my.less");
+			module.hot.accept("!!../../../node_modules/.0.28.0@css-loader/index.js!../../../node_modules/.4.0.3@less-loader/dist/index.js!./login.less", function() {
+				var newContent = require("!!../../../node_modules/.0.28.0@css-loader/index.js!../../../node_modules/.4.0.3@less-loader/dist/index.js!./login.less");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -24634,7 +24417,7 @@
 	}
 
 /***/ }),
-/* 284 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(193)(undefined);
@@ -24642,10 +24425,16 @@
 
 
 	// module
-	exports.push([module.id, ".hide {\n  display: none !important;\n}\n.tab {\n  border-radius: 5px;\n  background-color: #F11F1E;\n  color: #F5F5F5;\n  padding: 5px 6px;\n  margin-right: 0.1rem;\n}\n.tab.tab-orange {\n  background-color: #F78E0F;\n}\n.tab.tab-blue {\n  background-color: #4A8BF6;\n}\n.fl-right {\n  float: right;\n}\n.fl-right:after {\n  content: \" \";\n  display: block;\n  clear: both;\n  height: 0;\n  font-size: 0;\n  visibility: hidden;\n}\n.page-head {\n  height: 0.4rem;\n  position: relative;\n}\n.page-head h1 {\n  text-align: center;\n  font-size: 0.18rem;\n  font-weight: normal;\n  line-height: 0.4rem;\n}\n.page-head .icon-return {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(198) + ");\n  position: absolute;\n  left: 0.1rem;\n  top: 0.125rem;\n}\n.page-head .icon-share {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(199) + ");\n  position: absolute;\n  right: 0.1rem;\n  top: 0.125rem;\n}\n* {\n  padding: 0;\n  margin: 0;\n  color: #333;\n}\nhtml {\n  font-size: 100px;\n}\nbody {\n  font-size: 14px;\n  background-color: #F3F6F8;\n}\nli {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\ninput,\ntextarea {\n  border: none;\n  outline: none;\n}\nheader,\ndiv {\n  background-color: #fff;\n}\n.profile-wrap {\n  background-color: #F3F6F8;\n}\n.profile-wrap .profile-group {\n  margin-bottom: 0.1rem;\n  padding: 0.1rem;\n}\n.profile-wrap .profile-head {\n  margin-top: 0.1rem;\n}\n.profile-wrap .profile-head .img-box {\n  display: inline-block;\n  width: 0.4rem;\n  height: 0.4rem;\n  border-radius: 50%;\n  overflow: hidden;\n}\n.profile-wrap .profile-head img {\n  width: 100%;\n  height: 100%;\n}\n.profile-wrap .profile-head .name {\n  display: inline-block;\n  vertical-align: top;\n  margin-left: 0.1rem;\n  margin-bottom: 0.06rem;\n}\n.profile-wrap .profile-head .name p {\n  line-height: 0.4rem;\n}\n.profile-wrap .profile-head .header {\n  border-bottom: 1px solid #e5e5e5;\n}\n.profile-wrap .profile-head .footer {\n  margin-top: 0.1rem;\n}\n.profile-wrap .profile-head .item {\n  display: inline-block;\n  width: 48%;\n}\n.profile-wrap .profile-head .item h3,\n.profile-wrap .profile-head .item p {\n  font-size: 0.12rem;\n  text-align: center;\n}\n.profile-wrap .profile-head .item h3 {\n  color: #AAA;\n}\n.profile-wrap .profile-head .item p {\n  font-weight: bold;\n  color: #F78E0F;\n}\n.profile-wrap .profile-group p {\n  color: inherit;\n}\n.profile-wrap .profile-group .text {\n  color: #AAA;\n}\n.profile-wrap .profile-phone {\n  margin-bottom: 0.5px;\n}\n.profile-wrap .profile-exit {\n  color: #F11F1E;\n  text-align: center;\n}\n", ""]);
+	exports.push([module.id, ".hide {\n  display: none !important;\n}\n.tab {\n  border-radius: 5px;\n  background-color: #F11F1E;\n  color: #F5F5F5;\n  padding: 5px 6px;\n  margin-right: 0.1rem;\n}\n.tab.tab-orange {\n  background-color: #F78E0F;\n}\n.tab.tab-blue {\n  background-color: #4A8BF6;\n}\n.fl-right {\n  float: right;\n}\n.fl-right:after {\n  content: \" \";\n  display: block;\n  clear: both;\n  height: 0;\n  font-size: 0;\n  visibility: hidden;\n}\n.page-head {\n  height: 0.4rem;\n  position: relative;\n}\n.page-head h1 {\n  text-align: center;\n  font-size: 0.18rem;\n  font-weight: normal;\n  line-height: 0.4rem;\n}\n.page-head .icon-return {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(198) + ");\n  position: absolute;\n  left: 0.1rem;\n  top: 0.125rem;\n}\n.page-head .icon-share {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(199) + ");\n  position: absolute;\n  right: 0.1rem;\n  top: 0.125rem;\n}\n* {\n  padding: 0;\n  margin: 0;\n  color: #333;\n}\nhtml {\n  font-size: 100px;\n}\nbody {\n  font-size: 14px;\n  background-color: #F3F6F8;\n}\nli {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\ninput,\ntextarea {\n  border: none;\n  outline: none;\n}\nheader,\ndiv {\n  background-color: #fff;\n}\nhtml,\nbody {\n  width: 100%;\n  height: 100%;\n}\ndiv {\n  background-color: rgba(255, 255, 255, 0);\n}\nbody {\n  width: 100%;\n  height: 100%;\n  background-image: url(" + __webpack_require__(287) + ");\n  background-size: cover;\n}\n.login-wrap {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.login-wrap h1 {\n  color: #FFF;\n  margin-bottom: 0.5rem;\n  text-align: center;\n  font-family: \"SimHei\";\n}\n.login-wrap .form-wrap {\n  margin-bottom: 1rem;\n}\n.login-wrap .form-group {\n  display: inline-block;\n  text-align: center;\n  width: 100%;\n  line-height: 2em;\n  background-color: rgba(255, 255, 255, 0);\n  border: 1px solid #e5e5e5;\n  border-radius: 1em;\n  margin: 0.1rem 0;\n}\n.login-wrap .form-group input,\n.login-wrap .form-group a {\n  font-family: \"SimHei\";\n}\n.login-wrap .form-group input {\n  background-color: rgba(255, 255, 255, 0);\n  line-height: 2em;\n  padding: 0 1em;\n  color: #FFF;\n  font-size: 0.15rem;\n}\n.login-wrap .form-group input::-webkit-input-placeholder {\n  color: #ccc;\n}\n.login-wrap .group-submit {\n  background-color: #01A1EA;\n  border: none;\n}\n.login-wrap .group-submit input {\n  letter-spacing: 0.02rem;\n}\n.login-wrap .resigter-link {\n  text-align: center;\n  font-size: 0.12rem;\n}\n.login-wrap .resigter-link a {\n  color: #CCC;\n}\n.register-wrap .form-group .register-label {\n  position: absolute;\n  left: 0;\n  padding: 0 0.1rem;\n  background-color: #fff;\n  border: 1px solid #fff;\n  border-radius: 1em 0 0 1em;\n  text-align: left;\n}\n.register-wrap .form-group input {\n  padding-left: 4em;\n}\n.register-wrap .form-group #submit {\n  padding: 0;\n}\n.register-wrap .group-title {\n  border: none;\n}\n.register-wrap .group-title p {\n  margin-bottom: 0.1rem;\n}\n.register-wrap .group-title div {\n  display: inline-block;\n}\n.register-wrap .group-title label {\n  display: inline-block;\n  position: relative;\n  width: 0.4rem;\n  height: 0.4rem;\n  margin: 0 0.1rem;\n  overflow: hidden;\n  border-radius: 50%;\n}\n.register-wrap .group-title label img {\n  width: 100%;\n  height: 100%;\n}\n.register-wrap .group-title label.checked:after {\n  content: \"\\2714\";\n  font-weight: blod;\n  font-size: 0.2rem;\n  width: 100%;\n  height: 100%;\n  line-height: 0.4rem;\n  text-align: center;\n  color: #F11F1E;\n  position: absolute;\n  left: 0;\n  background-color: rgba(255, 255, 255, 0.5);\n}\n", ""]);
 
 	// exports
 
+
+/***/ }),
+/* 287 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "public/img/bg_login.jpg";
 
 /***/ })
 /******/ ]);

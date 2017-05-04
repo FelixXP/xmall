@@ -39,5 +39,34 @@ module.exports = {
 				connection.release();
 			});
 		});
+	},
+	login: function(req, res, next){
+		//获取前端页面传过来的参数
+		var param = req.body;
+		var sess = req.session;
+		sess.username = param.name;
+		res.redirect('//localhost:3000'); 
+	},
+	logout: function(req, res, next){
+		var sess = req.session;
+		sess.username = null;
+		var ret =  {
+			code: 0,
+			result: {},
+			msg: 'ok'
+		}
+		res.json(ret);
+	},
+	checkLogin: function(req, res, next){
+		var sess = req.session;
+		var ret =  {
+			code: 0,
+			result: {
+				login: sess.username ? 1 : 0
+			},
+			msg: 'ok'
+		}
+		res.json(ret);
 	}
+
 }

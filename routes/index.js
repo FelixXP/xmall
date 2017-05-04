@@ -18,4 +18,11 @@ router.get('/my', function(req, res, next) {
 });
 
 
+/* GET login page. */
+router.get('/login', function(req, res, next) {
+  res.render('login');
+});
+
+
+
 module.exports = router;

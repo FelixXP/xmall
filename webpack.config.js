@@ -6,9 +6,10 @@ module.exports = {
     // 页面入口文件配置
     entry : {
         'index': './origin/public/js/index.js',
-        'detail': './origin/public/js/detail.js',
-        'upload': './origin/public/js/upload.js',
-        'my': './origin/public/js/my.js',
+        // 'detail': './origin/public/js/detail.js',
+        // 'upload': './origin/public/js/upload.js',
+        // 'my': './origin/public/js/my.js',
+        // 'login': './origin/public/js/login.js'
     },
     // 入口文件输出配置
     output : {
@@ -54,26 +55,33 @@ module.exports = {
             inject: 'body',
             chunks: ['index']
         }),
-        new htmlWebpackPlugin({
-            filename: 'views/detail.html',
-            template: 'origin/views/index.html',
-            title: '商品详情',
-            inject: 'body',
-            chunks: ['detail']
-        }),
-        new htmlWebpackPlugin({
-            filename: 'views/upload.html',
-            template: 'origin/views/index.html',
-            title: '发布',
-            inject: 'body',
-            chunks: ['upload']
-        }),
-        new htmlWebpackPlugin({
-            filename: 'views/my.html',
-            template: 'origin/views/my.html',
-            title: '发布',
-            inject: 'body',
-            chunks: ['my']
-        })
+        // new htmlWebpackPlugin({
+        //     filename: 'views/detail.html',
+        //     template: 'origin/views/index.html',
+        //     title: '商品详情',
+        //     inject: 'body',
+        //     chunks: ['detail']
+        // }),
+        // new htmlWebpackPlugin({
+        //     filename: 'views/upload.html',
+        //     template: 'origin/views/index.html',
+        //     title: '发布',
+        //     inject: 'body',
+        //     chunks: ['upload']
+        // }),
+        // new htmlWebpackPlugin({
+        //     filename: 'views/my.html',
+        //     template: 'origin/views/my.html',
+        //     title: '发布',
+        //     inject: 'body',
+        //     chunks: ['my']
+        // }),
+        // new htmlWebpackPlugin({
+        //     filename: 'views/login.html',
+        //     template: 'origin/views/index.html',
+        //     title: '登录/注册',
+        //     inject: 'body',
+        //     chunks: ['login']
+        // })
     ]
 }

@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -12,6 +13,15 @@ var detail = require('./routes/detail');
 var app = express();
 
 var ejs = require('ejs'); 
+
+//initialize  session
+app.use(session({
+	name: 'xmall',
+	secret:'keyboard cat',
+	cookie: ('name','value', {path:'/', httpOnly: true,secure: false, maxAge:60000}),
+	resave: true,
+	saveUninitialized: true
+}));
 
 // view engine setup
 app.engine('html', ejs.__express);

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../common/Header'
+import Style from '../../../style/my.less';
 
 class Main extends React.Component{
 	constructor(props) {
@@ -12,7 +13,22 @@ class Main extends React.Component{
 			phone: 18814128046,
 			time: '2017-05-01'
 		}
+		this.onExit = this.onExit.bind(this);
 	}
+
+	onExit(){
+		var _this = this,
+			url = '//localhost:3000/users/logout',
+			data = {};
+		$.post(url, data, function(ret){
+			if (ret.code == 0) {
+				window.location.href = '//localhost:3000/';
+			}else{
+				console.log('error', ret.msg)
+			}
+		});
+	}
+
 	render(){
 		return(
 			<div className="profile-wrap">
@@ -52,7 +68,7 @@ class Main extends React.Component{
 			        </p>
 			    </div>
 
-			    <div className="profile-exit profile-group">
+			    <div onClick={this.onExit} className="profile-exit profile-group">
 			        <p>退出登录</p>
 			    </div>
 			</div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../common/Header';
 import Goods from './Goods';
 import Comment from './Comment';
+import Style from '../../../style/detail.less';
 
 
 class Main extends React.Component{
