@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Header from '../common/Header'
+import Header from '../common/Header';
+import { browserHistory } from 'react-router';
 import Style from '../../../style/my.less';
 
 class Main extends React.Component{
@@ -13,16 +14,16 @@ class Main extends React.Component{
 			phone: 18814128046,
 			time: '2017-05-01'
 		}
-		this.onExit = this.onExit.bind(this);
+		this.onLogout = this.onLogout.bind(this);
 	}
 
-	onExit(){
+	onLogout(){
 		var _this = this,
 			url = '//localhost:3000/users/logout',
 			data = {};
 		$.post(url, data, function(ret){
 			if (ret.code == 0) {
-				window.location.href = '//localhost:3000/';
+				browserHistory.push('/');
 			}else{
 				console.log('error', ret.msg)
 			}
@@ -68,7 +69,7 @@ class Main extends React.Component{
 			        </p>
 			    </div>
 
-			    <div onClick={this.onExit} className="profile-exit profile-group">
+			    <div onClick={this.onLogout} className="profile-exit profile-group">
 			        <p>退出登录</p>
 			    </div>
 			</div>

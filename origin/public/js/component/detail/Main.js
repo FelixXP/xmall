@@ -10,7 +10,6 @@ class Main extends React.Component{
 	}
 	constructor(props) {
 		super(props);
-		console.log(this.props,"felix");
 		this.goods={
 			imgs: ['/public/img/01.jpg'],
 			price: '100.00',

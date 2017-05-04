@@ -18,7 +18,7 @@ var ejs = require('ejs');
 app.use(session({
 	name: 'xmall',
 	secret:'keyboard cat',
-	cookie: ('name','value', {path:'/', httpOnly: true,secure: false, maxAge:60000}),
+	cookie: ('name','value', {path:'/', httpOnly: true,secure: false, maxAge: 10 * 60 * 1000}),
 	resave: true,
 	saveUninitialized: true
 }));

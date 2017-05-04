@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Router, Route, hashHistory, IndexRoute} from 'react-router';
+import { Router, Route, browserHistory , IndexRoute} from 'react-router';
 import IndexMain from './Main';
 import DetailMain from '../detail/Main';
 import UploadMain from '../upload/Main';
@@ -12,7 +12,7 @@ import RouterHandler from '../common/RouterHandler';
 class indexRouter extends React.Component{
 	render(){
 		return(
-		  <Router history={hashHistory}>
+		  <Router history={browserHistory}>
 		    <Route path="/" component={RouterHandler}>
 		    	<IndexRoute component={IndexMain} />
 		    </Route>

@@ -74,7 +74,6 @@ class Main extends React.Component{
 				console.log('error', ret.msg)
 			}
 		})
-		console.log(this.login,'checkLogin')
 	}
 
 	componentWillMount() {
@@ -82,7 +81,6 @@ class Main extends React.Component{
 	}
 
 	componentDidMount() {
-		console.log(this.login, 'componentDidMount')
 	}
 
 	render(){

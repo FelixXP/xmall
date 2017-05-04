@@ -21824,15 +21824,15 @@
 
 	var _Login2 = _interopRequireDefault(_Login);
 
-	var _Register = __webpack_require__(278);
+	var _Register = __webpack_require__(281);
 
 	var _Register2 = _interopRequireDefault(_Register);
 
-	var _Main7 = __webpack_require__(280);
+	var _Main7 = __webpack_require__(283);
 
 	var _Main8 = _interopRequireDefault(_Main7);
 
-	var _RouterHandler = __webpack_require__(283);
+	var _RouterHandler = __webpack_require__(286);
 
 	var _RouterHandler2 = _interopRequireDefault(_RouterHandler);
 
@@ -21858,7 +21858,7 @@
 			value: function render() {
 				return _react2.default.createElement(
 					_reactRouter.Router,
-					{ history: _reactRouter.hashHistory },
+					{ history: _reactRouter.browserHistory },
 					_react2.default.createElement(
 						_reactRouter.Route,
 						{ path: '/', component: _RouterHandler2.default },
@@ -27891,7 +27891,6 @@
 						console.log('error', ret.msg);
 					}
 				});
-				console.log(this.login, 'checkLogin');
 			}
 		}, {
 			key: 'componentWillMount',
@@ -27900,9 +27899,7 @@
 			}
 		}, {
 			key: 'componentDidMount',
-			value: function componentDidMount() {
-				console.log(this.login, 'componentDidMount');
-			}
+			value: function componentDidMount() {}
 		}, {
 			key: 'render',
 			value: function render() {
@@ -30819,7 +30816,6 @@
 
 			var _this = _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this, props));
 
-			console.log(_this.props, "felix");
 			_this.goods = {
 				imgs: ['/public/img/01.jpg'],
 				price: '100.00',
@@ -30858,7 +30854,7 @@
 /* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -30869,6 +30865,8 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(183);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30891,20 +30889,20 @@
 		}
 
 		_createClass(Header, [{
-			key: "onReturn",
+			key: 'onReturn',
 			value: function onReturn() {
-				history.back();
+				_reactRouter.browserHistory.goBack();
 			}
 		}, {
-			key: "render",
+			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
-					"header",
+					'header',
 					{ className: "page-head " + this.props.clsName },
-					_react2.default.createElement("a", { onClick: this.onReturn, href: "javascript:;", className: "icon icon-return" }),
-					_react2.default.createElement("a", { href: "javascript:;", className: "icon icon-share " + (this.props.share ? this.props.share : '') }),
+					_react2.default.createElement('a', { onClick: this.onReturn, href: 'javascript:;', className: 'icon icon-return' }),
+					_react2.default.createElement('a', { href: 'javascript:;', className: "icon icon-share " + (this.props.share ? this.props.share : '') }),
 					_react2.default.createElement(
-						"h1",
+						'h1',
 						null,
 						this.props.title
 					)
@@ -31839,7 +31837,7 @@
 
 	var _reactRouter = __webpack_require__(183);
 
-	var _login = __webpack_require__(284);
+	var _login = __webpack_require__(278);
 
 	var _login2 = _interopRequireDefault(_login);
 
@@ -31925,6 +31923,52 @@
 /* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(279);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(256)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/.0.28.0@css-loader/index.js!../../../node_modules/.4.0.3@less-loader/dist/index.js!./login.less", function() {
+				var newContent = require("!!../../../node_modules/.0.28.0@css-loader/index.js!../../../node_modules/.4.0.3@less-loader/dist/index.js!./login.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 279 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(249)(undefined);
+	// imports
+
+
+	// module
+	exports.push([module.id, ".hide {\n  display: none !important;\n}\n.tab {\n  border-radius: 5px;\n  background-color: #F11F1E;\n  color: #F5F5F5;\n  padding: 5px 6px;\n  margin-right: 0.1rem;\n}\n.tab.tab-orange {\n  background-color: #F78E0F;\n}\n.tab.tab-blue {\n  background-color: #4A8BF6;\n}\n.fl-right {\n  float: right;\n}\n.fl-right:after {\n  content: \" \";\n  display: block;\n  clear: both;\n  height: 0;\n  font-size: 0;\n  visibility: hidden;\n}\n.page-head {\n  height: 0.4rem;\n  position: relative;\n}\n.page-head h1 {\n  text-align: center;\n  font-size: 0.18rem;\n  font-weight: normal;\n  line-height: 0.4rem;\n}\n.page-head .icon-return {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(254) + ");\n  position: absolute;\n  left: 0.1rem;\n  top: 0.125rem;\n}\n.page-head .icon-share {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(255) + ");\n  position: absolute;\n  right: 0.1rem;\n  top: 0.125rem;\n}\n* {\n  padding: 0;\n  margin: 0;\n  color: #333;\n}\nhtml {\n  font-size: 100px;\n}\nbody {\n  font-size: 14px;\n  background-color: #F3F6F8;\n}\nli {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\ninput,\ntextarea {\n  border: none;\n  outline: none;\n}\nheader,\ndiv {\n  background-color: #fff;\n}\nhtml,\nbody {\n  width: 100%;\n  height: 100%;\n}\n.login-bg {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 0;\n  background-image: url(" + __webpack_require__(280) + ");\n  background-size: cover;\n}\n.login-wrap {\n  background-color: rgba(255, 255, 255, 0);\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.login-wrap div {\n  background-color: rgba(255, 255, 255, 0);\n}\n.login-wrap h1 {\n  color: #FFF;\n  margin-bottom: 0.5rem;\n  text-align: center;\n  font-family: \"SimHei\";\n}\n.login-wrap .form-wrap {\n  margin-bottom: 1rem;\n}\n.login-wrap .form-group {\n  display: inline-block;\n  text-align: center;\n  width: 100%;\n  line-height: 2em;\n  background-color: rgba(255, 255, 255, 0);\n  border: 1px solid #e5e5e5;\n  border-radius: 1em;\n  margin: 0.1rem 0;\n}\n.login-wrap .form-group input,\n.login-wrap .form-group a {\n  font-family: \"SimHei\";\n}\n.login-wrap .form-group input {\n  background-color: rgba(255, 255, 255, 0);\n  line-height: 2em;\n  padding: 0 1em;\n  color: #FFF;\n  font-size: 0.15rem;\n}\n.login-wrap .form-group input::-webkit-input-placeholder {\n  color: #ccc;\n}\n.login-wrap .group-submit {\n  background-color: #01A1EA;\n  border: none;\n}\n.login-wrap .group-submit input {\n  letter-spacing: 0.02rem;\n}\n.login-wrap .resigter-link,\n.login-wrap .return-link {\n  text-align: center;\n  font-size: 0.12rem;\n}\n.login-wrap .resigter-link a,\n.login-wrap .return-link a {\n  color: #CCC;\n}\n.login-wrap .return-link {\n  margin-top: 0.2rem;\n}\n.login-wrap .return-link a {\n  color: blue;\n}\n.register-wrap .form-group .register-label {\n  position: absolute;\n  left: 0;\n  padding: 0 0.1rem;\n  background-color: #fff;\n  border: 1px solid #fff;\n  border-radius: 1em 0 0 1em;\n  text-align: left;\n}\n.register-wrap .form-group input {\n  padding-left: 4em;\n}\n.register-wrap .form-group #submit {\n  padding: 0;\n}\n.register-wrap .group-title {\n  border: none;\n}\n.register-wrap .group-title p {\n  margin-bottom: 0.1rem;\n}\n.register-wrap .group-title div {\n  display: inline-block;\n}\n.register-wrap .group-title label {\n  display: inline-block;\n  position: relative;\n  width: 0.4rem;\n  height: 0.4rem;\n  margin: 0 0.1rem;\n  overflow: hidden;\n  border-radius: 50%;\n}\n.register-wrap .group-title label img {\n  width: 100%;\n  height: 100%;\n}\n.register-wrap .group-title label.checked:after {\n  content: \"\\2714\";\n  font-weight: blod;\n  font-size: 0.2rem;\n  width: 100%;\n  height: 100%;\n  line-height: 0.4rem;\n  text-align: center;\n  color: #F11F1E;\n  position: absolute;\n  left: 0;\n  background-color: rgba(255, 255, 255, 0.5);\n}\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 280 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "public/img/bg_login.jpg";
+
+/***/ }),
+/* 281 */
+/***/ (function(module, exports, __webpack_require__) {
+
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -31939,11 +31983,11 @@
 
 	var _reactRouter = __webpack_require__(183);
 
-	var _TitleRadio = __webpack_require__(279);
+	var _TitleRadio = __webpack_require__(282);
 
 	var _TitleRadio2 = _interopRequireDefault(_TitleRadio);
 
-	var _login = __webpack_require__(284);
+	var _login = __webpack_require__(278);
 
 	var _login2 = _interopRequireDefault(_login);
 
@@ -32050,7 +32094,7 @@
 	exports.default = Register;
 
 /***/ }),
-/* 279 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -32116,7 +32160,7 @@
 	exports.default = TitleRadio;
 
 /***/ }),
-/* 280 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32135,7 +32179,9 @@
 
 	var _Header2 = _interopRequireDefault(_Header);
 
-	var _my = __webpack_require__(281);
+	var _reactRouter = __webpack_require__(183);
+
+	var _my = __webpack_require__(284);
 
 	var _my2 = _interopRequireDefault(_my);
 
@@ -32163,19 +32209,19 @@
 				phone: 18814128046,
 				time: '2017-05-01'
 			};
-			_this2.onExit = _this2.onExit.bind(_this2);
+			_this2.onLogout = _this2.onLogout.bind(_this2);
 			return _this2;
 		}
 
 		_createClass(Main, [{
-			key: 'onExit',
-			value: function onExit() {
+			key: 'onLogout',
+			value: function onLogout() {
 				var _this = this,
 				    url = '//localhost:3000/users/logout',
 				    data = {};
 				$.post(url, data, function (ret) {
 					if (ret.code == 0) {
-						window.location.href = '//localhost:3000/';
+						_reactRouter.browserHistory.push('/');
 					} else {
 						console.log('error', ret.msg);
 					}
@@ -32272,7 +32318,7 @@
 					),
 					_react2.default.createElement(
 						'div',
-						{ onClick: this.onExit, className: 'profile-exit profile-group' },
+						{ onClick: this.onLogout, className: 'profile-exit profile-group' },
 						_react2.default.createElement(
 							'p',
 							null,
@@ -32289,13 +32335,13 @@
 	exports.default = Main;
 
 /***/ }),
-/* 281 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(282);
+	var content = __webpack_require__(285);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(256)(content, {});
@@ -32315,7 +32361,7 @@
 	}
 
 /***/ }),
-/* 282 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(249)(undefined);
@@ -32329,7 +32375,7 @@
 
 
 /***/ }),
-/* 283 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32372,52 +32418,6 @@
 	}(_react2.default.Component);
 
 	exports.default = RouterHandler;
-
-/***/ }),
-/* 284 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(285);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(256)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/.0.28.0@css-loader/index.js!../../../node_modules/.4.0.3@less-loader/dist/index.js!./login.less", function() {
-				var newContent = require("!!../../../node_modules/.0.28.0@css-loader/index.js!../../../node_modules/.4.0.3@less-loader/dist/index.js!./login.less");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ }),
-/* 285 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(249)(undefined);
-	// imports
-
-
-	// module
-	exports.push([module.id, ".hide {\n  display: none !important;\n}\n.tab {\n  border-radius: 5px;\n  background-color: #F11F1E;\n  color: #F5F5F5;\n  padding: 5px 6px;\n  margin-right: 0.1rem;\n}\n.tab.tab-orange {\n  background-color: #F78E0F;\n}\n.tab.tab-blue {\n  background-color: #4A8BF6;\n}\n.fl-right {\n  float: right;\n}\n.fl-right:after {\n  content: \" \";\n  display: block;\n  clear: both;\n  height: 0;\n  font-size: 0;\n  visibility: hidden;\n}\n.page-head {\n  height: 0.4rem;\n  position: relative;\n}\n.page-head h1 {\n  text-align: center;\n  font-size: 0.18rem;\n  font-weight: normal;\n  line-height: 0.4rem;\n}\n.page-head .icon-return {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(254) + ");\n  position: absolute;\n  left: 0.1rem;\n  top: 0.125rem;\n}\n.page-head .icon-share {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(255) + ");\n  position: absolute;\n  right: 0.1rem;\n  top: 0.125rem;\n}\n* {\n  padding: 0;\n  margin: 0;\n  color: #333;\n}\nhtml {\n  font-size: 100px;\n}\nbody {\n  font-size: 14px;\n  background-color: #F3F6F8;\n}\nli {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\ninput,\ntextarea {\n  border: none;\n  outline: none;\n}\nheader,\ndiv {\n  background-color: #fff;\n}\nhtml,\nbody {\n  width: 100%;\n  height: 100%;\n}\n.login-bg {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 0;\n  background-image: url(" + __webpack_require__(286) + ");\n  background-size: cover;\n}\n.login-wrap {\n  background-color: rgba(255, 255, 255, 0);\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.login-wrap div {\n  background-color: rgba(255, 255, 255, 0);\n}\n.login-wrap h1 {\n  color: #FFF;\n  margin-bottom: 0.5rem;\n  text-align: center;\n  font-family: \"SimHei\";\n}\n.login-wrap .form-wrap {\n  margin-bottom: 1rem;\n}\n.login-wrap .form-group {\n  display: inline-block;\n  text-align: center;\n  width: 100%;\n  line-height: 2em;\n  background-color: rgba(255, 255, 255, 0);\n  border: 1px solid #e5e5e5;\n  border-radius: 1em;\n  margin: 0.1rem 0;\n}\n.login-wrap .form-group input,\n.login-wrap .form-group a {\n  font-family: \"SimHei\";\n}\n.login-wrap .form-group input {\n  background-color: rgba(255, 255, 255, 0);\n  line-height: 2em;\n  padding: 0 1em;\n  color: #FFF;\n  font-size: 0.15rem;\n}\n.login-wrap .form-group input::-webkit-input-placeholder {\n  color: #ccc;\n}\n.login-wrap .group-submit {\n  background-color: #01A1EA;\n  border: none;\n}\n.login-wrap .group-submit input {\n  letter-spacing: 0.02rem;\n}\n.login-wrap .resigter-link,\n.login-wrap .return-link {\n  text-align: center;\n  font-size: 0.12rem;\n}\n.login-wrap .resigter-link a,\n.login-wrap .return-link a {\n  color: #CCC;\n}\n.login-wrap .return-link {\n  margin-top: 0.2rem;\n}\n.login-wrap .return-link a {\n  color: blue;\n}\n.register-wrap .form-group .register-label {\n  position: absolute;\n  left: 0;\n  padding: 0 0.1rem;\n  background-color: #fff;\n  border: 1px solid #fff;\n  border-radius: 1em 0 0 1em;\n  text-align: left;\n}\n.register-wrap .form-group input {\n  padding-left: 4em;\n}\n.register-wrap .form-group #submit {\n  padding: 0;\n}\n.register-wrap .group-title {\n  border: none;\n}\n.register-wrap .group-title p {\n  margin-bottom: 0.1rem;\n}\n.register-wrap .group-title div {\n  display: inline-block;\n}\n.register-wrap .group-title label {\n  display: inline-block;\n  position: relative;\n  width: 0.4rem;\n  height: 0.4rem;\n  margin: 0 0.1rem;\n  overflow: hidden;\n  border-radius: 50%;\n}\n.register-wrap .group-title label img {\n  width: 100%;\n  height: 100%;\n}\n.register-wrap .group-title label.checked:after {\n  content: \"\\2714\";\n  font-weight: blod;\n  font-size: 0.2rem;\n  width: 100%;\n  height: 100%;\n  line-height: 0.4rem;\n  text-align: center;\n  color: #F11F1E;\n  position: absolute;\n  left: 0;\n  background-color: rgba(255, 255, 255, 0.5);\n}\n", ""]);
-
-	// exports
-
-
-/***/ }),
-/* 286 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "public/img/bg_login.jpg";
 
 /***/ })
 /******/ ]);

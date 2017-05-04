@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 
 class Header extends React.Component{
 	constructor(props) {
@@ -7,7 +8,7 @@ class Header extends React.Component{
 	}
 
 	onReturn(){
-		history.back();
+		browserHistory.goBack();
 	}
 
 	render(){
