@@ -6,10 +6,28 @@ import Style from '../../../style/detail.less';
 
 
 class Main extends React.Component{
-	componentWillMount() {
-	}
 	constructor(props) {
 		super(props);
+		this.state = {
+			comment: 1
+		}
+		this.initParam = this.initParam.bind(this);
+		this.setItem = this.setItem.bind(this);
+
+	}
+
+	setItem(item){
+		this.setState({
+			item
+		});
+	}
+
+	componentWillMount() {
+		this.initParam();
+	}
+
+
+	initParam(){
 		this.goods={
 			imgs: ['/public/img/01.jpg'],
 			price: '100.00',
@@ -25,13 +43,11 @@ class Main extends React.Component{
 	}
 	
 	render(){
-
-
 		return(
 			<div className='detail-main'>
 				<Header title='商品详情' clsName='detail-head' />
 				<Goods goods={this.goods} />
-				<Comment />
+				<Comment setItem = {this.setItem.bind(this)} />
 			</div>
 		);
 	}

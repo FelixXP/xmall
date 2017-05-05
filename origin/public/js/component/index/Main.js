@@ -23,7 +23,19 @@ class Main extends React.Component{
 
 		this.goods_list = [
 			{
-				img: '/public/img/01.jpg',
+				img: '/public/img/02.jpg',
+				name: 'SALE 潮牌男装联合',
+				introduction: '商品描述，一句话描述 商品描述，一句话描述 商品描述，一句话描述 ',
+				price: '￥100.00'
+			},
+			{
+				img: '/public/img/03.jpg',
+				name: 'SALE 潮牌男装联合',
+				introduction: '商品描述，一句话描述 商品描述，一句话描述 商品描述，一句话描述 ',
+				price: '￥100.00'
+			},
+			{
+				img: '/public/img/02.jpg',
 				name: 'SALE 潮牌男装联合',
 				introduction: '商品描述，一句话描述 商品描述，一句话描述 商品描述，一句话描述 ',
 				price: '￥100.00'
@@ -35,19 +47,7 @@ class Main extends React.Component{
 				price: '￥100.00'
 			},
 			{
-				img: '/public/img/01.jpg',
-				name: 'SALE 潮牌男装联合',
-				introduction: '商品描述，一句话描述 商品描述，一句话描述 商品描述，一句话描述 ',
-				price: '￥100.00'
-			},
-			{
-				img: '/public/img/01.jpg',
-				name: 'SALE 潮牌男装联合',
-				introduction: '商品描述，一句话描述 商品描述，一句话描述 商品描述，一句话描述 ',
-				price: '￥100.00'
-			},
-			{
-				img: '/public/img/01.jpg',
+				img: '/public/img/03.jpg',
 				name: 'SALE 潮牌男装联合',
 				introduction: '商品描述，一句话描述 商品描述，一句话描述 商品描述，一句话描述 ',
 				price: '￥100.00'
