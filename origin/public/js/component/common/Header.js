@@ -15,7 +15,7 @@ class Header extends React.Component{
 		return(
 			<header className={"page-head "+this.props.clsName}>
 		        <a onClick={this.onReturn} href="javascript:;" className="icon icon-return"></a>
-		        <a href="javascript:;" className={"icon icon-share " + (this.props.share ? this.props.share : '')}></a>
+		        <a href="javascript:;" className={"icon icon-share hide " + (this.props.share ? this.props.share : '')}></a>
 		        <h1>{this.props.title}</h1>
 			</header>
 		);

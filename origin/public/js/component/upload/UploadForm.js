@@ -14,6 +14,12 @@ class UploadForm extends React.Component{
         return(
             <form action="" className="upload-form" id="upload_form">
                 <AddPicture lebelFor='picture'/>
+
+                <div className="form-group">
+                    <label htmlFor="title">标题</label>
+                    <input className="title" placeholder="请输入商品标题" type="text" name="title" id="title" />
+                </div>
+
                 <div  className="form-group">
                     <textarea name="introduction" id="introduction" placeholder="详细描述几成新，购买事件都有助于吸引跟多人关注哦！" rows="5"></textarea>
                 </div>

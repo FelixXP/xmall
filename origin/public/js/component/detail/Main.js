@@ -25,6 +25,9 @@ class Main extends React.Component{
 	componentWillMount() {
 		this.initParam();
 	}
+	componentDidMount() {
+		console.log(this.props.location);
+	}
 
 
 	initParam(){

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import Banner from '../common/Banner';
 import GoodsItem from './GoodsItem';
+import SearchBar from './SearchBar';
 import GoodsHeader from './GoodsHeader';
 import MoreBtn from './MoreBtn';
 import Style from '../../../style/index.less';
@@ -12,6 +14,17 @@ class Main extends React.Component{
 			login: 0,
 		};
 
+		this.checkLogin = this.checkLogin.bind(this);
+		this.initParam = this.initParam.bind(this);
+		this.globalClick = this.globalClick.bind(this);
+	}
+
+	globalClick(e){
+		e.stopPropagation();
+		$('.more-btn').addClass('off');
+	}
+
+	initParam(){
 		this.hot_sale_list = [
 			{
 				img: '/public/img/01.jpg',
@@ -56,8 +69,6 @@ class Main extends React.Component{
 
 		//存储登录态 0为未登录
 		this.login = 1100;
-
-		this.checkLogin = this.checkLogin.bind(this);
 	}
 
 	checkLogin(){
@@ -78,6 +89,7 @@ class Main extends React.Component{
 
 	componentWillMount() {
 		this.checkLogin();
+		this.initParam();
 	}
 
 	componentDidMount() {
@@ -85,11 +97,11 @@ class Main extends React.Component{
 
 	render(){
 		return (
-			<div>
-				<header className='hide'>
-					<Banner clsName='index-banner hide' imgPath='/public/img/01.jpg' />
+			<div onClick={this.globalClick}>
+				<header>
+					<SearchBar/>
 				</header>
-				<div className="headlines"></div>
+				<div className="headlines hide"></div>
 				<div className='hot-sale'>
 					<div className="title"><div className="line"><span>人气推荐</span></div></div>
 

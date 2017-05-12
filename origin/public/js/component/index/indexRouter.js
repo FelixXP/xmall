@@ -5,6 +5,7 @@ import DetailMain from '../detail/Main';
 import UploadMain from '../upload/Main';
 import LoginMain from '../login/Login';
 import RegisterMain from '../login/Register';
+import ResultMain from '../result/Result';
 import MyMain from '../my/Main';
 import RouterHandler from '../common/RouterHandler';
 
@@ -18,6 +19,9 @@ class indexRouter extends React.Component{
 		    </Route>
 		    <Route path="/detail" component={RouterHandler}>
 		    	<IndexRoute component={DetailMain} />
+		    </Route>
+		    <Route path="/result" component={RouterHandler}>
+		    	<IndexRoute component={ResultMain} />
 		    </Route>
 		    <Route path="/my" component={RouterHandler}>
 		    	<IndexRoute component={MyMain} />

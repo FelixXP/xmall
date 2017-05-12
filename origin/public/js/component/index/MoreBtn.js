@@ -7,7 +7,8 @@ class MoreBtn extends React.Component{
 		this.moreClick = this.moreClick.bind(this);
 	}
 
-	moreClick(){
+	moreClick(e){
+		e.stopPropagation();
 		$(this.refs.moreBtn).toggleClass('off');
 	}
 

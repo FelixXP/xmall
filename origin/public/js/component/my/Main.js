@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../common/Header';
-import { browserHistory } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 import Style from '../../../style/my.less';
 
 class Main extends React.Component{
@@ -46,12 +46,16 @@ class Main extends React.Component{
 
 			        <div className="footer">
 			            <div className="item">
-			                <h3>我的发布</h3>
-			                <p>{this.data.publish}</p>
+				            <Link to="/result?type=myPublish">
+				                <h3>我的发布</h3>
+				                <p>{this.data.publish}</p>
+			                </Link>
 			            </div>
 			            <div className="item">
-			                <h3>我的点赞</h3>
-			                <p>{this.data.liked}</p>
+			            	<Link to="/result?type=myLike">
+				                <h3>我的点赞</h3>
+				                <p>{this.data.liked}</p>
+			                </Link>
 			            </div>
 			        </div>
 			    </div>
